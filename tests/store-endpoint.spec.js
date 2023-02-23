@@ -24,7 +24,7 @@ test('delete inventory', async ({ request }) => {
     let resJson = await response.json()
     let message = resJson.message
     expect(response.status()).toBe(200)
-    expect(message).toBe(storeData.id)
+    expect(message).toBe(storeData.id.toString())
 });
 
 test('checking inventory order after delete', async ({ request }) => {
